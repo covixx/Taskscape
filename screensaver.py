@@ -19,12 +19,13 @@ def main(page: ft.Page):
         if e.key:
             page.window_close()
     def get_tasks():
-        notion = Client(auth="secret_pNLHXopzc5clPNX989JX6jlZTXJoGsxjNYulSKppduD")
-        page_id = '6591607777dd4718aaf59cbcb70b19d1'
+        notion = Client(auth="Your API key here")
+        #You can get your API key by creating a new Integration for your Notion account
+        page_id = 'Your Notion page ID here'
+        #The page ID is the last 32 digits in the page's URL
         page = notion.pages.retrieve(page_id=page_id)
         blocks = notion.blocks.children.list(block_id=page_id)
-
-        # Extract to-do items
+        
         for block in blocks['results']:
             if block['type'] == 'to_do':
                 to_do.append({
@@ -64,13 +65,11 @@ def main(page: ft.Page):
     
     threading.Thread(target=get_tasks, daemon=True).start()
     threading.Thread(target=update_time, daemon=True).start()
-    # Print the to-do items
     page.on_keyboard_event = on_keyboard
     page.add(
         display_title,
         ft.Row(
             [
-                # Right column for tasks
                 ft.Container(
                     content=display_tasks,
                     expand=5,
