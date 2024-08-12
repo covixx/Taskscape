@@ -11,3 +11,4 @@ Rename the .exe produced to .src, and place it in your System32 folder.
 Finally, select screensaver in your Screensavers options. 
 
 The script does also scrape your Ticktick Focus Time because Ticktick doesn't support Focus Time in its API, but you can comment out / delete the update_countdown() function and the Playwright initialisation to remove that functionality. 
+![image](https://github.com/user-attachments/assets/c00d8a13-dd76-498d-a8c9-f44bb7a18e0d)
