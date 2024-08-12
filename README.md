@@ -6,9 +6,11 @@ A simple script that takes your Notion notebook's to-do list and converts it int
 
 How to run: 
 Download the script, and provide your API key and Page ID in the script. 
+- To get your API key, create an Integration on Notion. 
+- Then, Connect your page to your new Integration. 
 
-Next, run the following command: PyInstaller --onefile screensaver.py
+Next, run the batch file. 
 
-Rename the .exe produced to .src, and place it in your System32 folder. 
+Once it's done, simply go to Screen Saver and select screensaver from the dropdown menu. 
 
-Finally, select screensaver in your Screensavers options. 
+Enjoy! 
