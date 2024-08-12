@@ -22,15 +22,15 @@ def main(page: ft.Page):
     page.padding = 20
     to_do = []
 
-    path_profile = r'C:\Users\Vaibhav\AppData\Roaming\Mozilla\Firefox\Profiles\nchscwx1.Selenium'
+    path_profile = r'Path to your Firefox Profile, which has Ticktick logged in.'
 
     def on_keyboard(e: ft.KeyboardEvent):
         if e.key:
             page.window_destroy()
 
     def get_tasks():
-        notion = Client(auth="secret_pNLHXopzc5clPNX989JX6jlZTXJoGsxjNYulSKppduD")
-        page_id = '6591607777dd4718aaf59cbcb70b19d1'
+        notion = Client(auth="Notion API key")
+        page_id = 'Page ID for the Notion page with the to-do list'
         page = notion.pages.retrieve(page_id=page_id)
         blocks = notion.blocks.children.list(block_id=page_id)
 
