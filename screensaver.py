@@ -85,7 +85,7 @@ def main(page: ft.Page):
     page.on_keyboard_event = on_keyboard
     page.add(
         ft.Container(
-            image_src= "C:\\Users\\Vaibhav\\Pictures\\pexels-asadphoto-457882.jpg",
+            image_src= "Add path to image",
             image_opacity= 0.5,
             image_fit= ft.ImageFit.FILL,
             expand= True,
