@@ -23,7 +23,7 @@ def main(page: ft.Page):
 
         indent = ' ' * 5
         for block in blocks['results']:
-            if block['type'] == 'to_do' and not block['to_do']['checked']:
+            if block['type'] == 'to_do' and not block['to_do']['checked'] and block['to_do']['rich_text'][0]['plain_text'].strip() != '':
                 to_do.append({
                     'text': block['to_do']['rich_text'][0]['plain_text']})
                 if block['has_children']:
