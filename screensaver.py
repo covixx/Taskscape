@@ -84,14 +84,26 @@ def main(page: ft.Page):
     
     page.on_keyboard_event = on_keyboard
     page.add(
-        ft.Row([display_title], alignment=ft.MainAxisAlignment.SPACE_BETWEEN),
-        ft.Row(
-            [
-                ft.Container(content=display_tasks, expand=5, padding=10),
-                ft.Container(content=ft.Column([time_display], alignment=ft.MainAxisAlignment.CENTER), expand=5, alignment=ft.alignment.top_center),
-            ],
-            expand=True
-        )
+        ft.Container(
+            image_src= "C:\\Users\\Vaibhav\\Pictures\\pexels-asadphoto-457882.jpg",
+            image_opacity= 0.5,
+            image_fit= ft.ImageFit.FILL,
+            expand= True,
+            content= ft.Container(
+                ft.Container(
+                    ft.Row([
+                            ft.Container(content=display_tasks, expand=5, padding=10),
+                            ft.Container(content=ft.Column([display_countdown], alignment=ft.MainAxisAlignment.END), expand=5, padding=10, alignment=ft.alignment.bottom_center),
+                            ft.Container(content=ft.Column([time_display], alignment=ft.MainAxisAlignment.CENTER), expand=5, alignment=ft.alignment.top_center),
+                        ], expand=True, 
+                        ),
+                ),
+                ft.Container(
+                    content= ft.Row([display_title], alignment=ft.MainAxisAlignment.CENTER),
+                    alignment= ft.alignment.bottom_center,
+                    ), 
+            )
+        ),
     )
     page.update()
 
