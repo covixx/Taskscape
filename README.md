@@ -1,7 +1,7 @@
 # Taskscape
 A simple script that takes your Notion notebook's to-do list and converts it into your screensaver
+![image](https://github.com/user-attachments/assets/0ded84bb-5614-4bb7-b374-616d4eae01f3)
 
-![image](https://github.com/user-attachments/assets/01cc1744-f3b3-4580-843f-a8a234a5c8f9)
 
 
 How to run: 
